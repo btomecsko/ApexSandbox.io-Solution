@@ -1,8 +1,6 @@
 public Boolean isEndWithZero(Integer num){
      //code here
-     Long endsZero = Math.mod(num, 10);
-
-     if(num == 0){
+     if(Math.mod(num, 10) == 0){
          return true;
      }else{
          return false;

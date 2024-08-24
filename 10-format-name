@@ -9,3 +9,4 @@ public String formatName(String firstName, String lastName) {
     }else{
         return lastName + ', ' + firstName;
     }
+}

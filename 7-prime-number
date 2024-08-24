@@ -1,12 +1,14 @@
 public Boolean isPrime(Integer num) {
     //code here
-    Integer remainder;
-    for(Integer i = 2; i <= num; i++){
-       remainder = Math.mod(num, i) 
-    }
-    if(remainder != 0){
-        return true;
-    }else{
+    if(num <= 1){
         return false;
+    }
+   
+    for(Integer i = 2; i <= num; i++){
+       if(Math.mod(num, i) != 0){
+            return true;
+        }else{
+            return false;
+        } 
     }
 }

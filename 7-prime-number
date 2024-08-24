@@ -1,14 +1,12 @@
 public Boolean isPrime(Integer num) {
-    //code here
-    if(num <= 1){
-        return false;
+    if (num <= 1) {
+        return false; // 0 and 1 are not prime
     }
-   
-    for(Integer i = 1; i <= (num - 1); i++){
-       if(Math.mod(num, i) != 0){
-            return true;
-        }else{
-            return false;
-        } 
+    
+    for (Integer i = 2; i * i <= num; i++) {
+        if (Math.mod(num, i) == 0) {
+            return false; // Found a divisor, not prime
+        }
     }
+    return true; // No divisors found, it's prime
 }
